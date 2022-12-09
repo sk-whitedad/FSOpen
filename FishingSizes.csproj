@@ -1,0 +1,196 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\ProjectCSharp\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>87590557D9B167DE18EFDF2B3268FD0BAA96C755</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FishingSizes_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="MainForm\Ticker_ListOption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="MainForm\Settings_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Alpaca.Markets.Extensions" Version="6.0.5" />
+    <PackageReference Include="deniszykov.WebSocketListener" Version="4.2.15" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Grpc.Core.Api" Version="2.49.0" />
+    <PackageReference Include="Horarium.AspNetCore" Version="1.0.0-beta-9" />
+    <PackageReference Include="Horarium.Mongo" Version="1.0.0-beta-9" />
+    <PackageReference Include="InteractiveBrokers.TwsClient" Version="1.0.755" />
+    <PackageReference Include="log4net" Version="2.0.15" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="SuperSocket.ClientEngine.Core" Version="0.10.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.4" />
+    <PackageReference Include="Tinkoff.InvestApi" Version="0.3.0" />
+    <PackageReference Include="Tinkoff.Trading.OpenApi" Version="1.7.5" />
+    <PackageReference Include="WebSocketSharp-netstandard" Version="1.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="BorderlessForm\Form1.cs" />
+    <Compile Remove="BorderlessForm\MainForm.cs" />
+    <Compile Remove="BorderlessForm\MainForm.Designer.cs" />
+    <Compile Remove="BorderlessForm\Native.cs" />
+    <Compile Remove="BorderlessForm\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Remove="BorderlessForm\Program.cs" />
+    <Compile Remove="BorderlessForm\Properties\AssemblyInfo.cs" />
+    <Compile Remove="BorderlessForm\Properties\Resources.Designer.cs" />
+    <Compile Remove="BorderlessForm\Properties\Settings.Designer.cs" />
+    <Compile Remove="IBApiTestClient\ApiProgram.cs" />
+    <Compile Remove="IBApiTestClient\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" />
+    <Compile Remove="IBApiTestClient\obj\Debug\net5.0\IBApiTestClient.AssemblyInfo.cs" />
+    <Compile Remove="IBApiTestClient\obj\Release\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" />
+    <Compile Remove="IBApiTestClient\obj\Release\net5.0\IBApiTestClient.AssemblyInfo.cs" />
+    <Compile Remove="IBApiTestClient\OrderSamples.cs" />
+    <Compile Remove="IBApiTestClient\TWSApiWrapper.cs" />
+    <Compile Remove="IBClient\AccountSummaryTags.cs" />
+    <Compile Remove="IBClient\Bar.cs" />
+    <Compile Remove="IBClient\BitMask.cs" />
+    <Compile Remove="IBClient\ComboLeg.cs" />
+    <Compile Remove="IBClient\CommissionReport.cs" />
+    <Compile Remove="IBClient\Constants.cs" />
+    <Compile Remove="IBClient\Contract.cs" />
+    <Compile Remove="IBClient\ContractCondition.cs" />
+    <Compile Remove="IBClient\ContractDescription.cs" />
+    <Compile Remove="IBClient\ContractDetails.cs" />
+    <Compile Remove="IBClient\DefaultEWrapper.cs" />
+    <Compile Remove="IBClient\DeltaNeutralContract.cs" />
+    <Compile Remove="IBClient\DepthMktDataDescription.cs" />
+    <Compile Remove="IBClient\EClient.cs" />
+    <Compile Remove="IBClient\EClientErrors.cs" />
+    <Compile Remove="IBClient\EClientException.cs" />
+    <Compile Remove="IBClient\EClientMsgSink.cs" />
+    <Compile Remove="IBClient\EClientSocket.cs" />
+    <Compile Remove="IBClient\EClientSocketSSL.cs" />
+    <Compile Remove="IBClient\EDecoder.cs" />
+    <Compile Remove="IBClient\EMessage.cs" />
+    <Compile Remove="IBClient\EOrderDecoder.cs" />
+    <Compile Remove="IBClient\EReader.cs" />
+    <Compile Remove="IBClient\EReaderMonitorSignal.cs" />
+    <Compile Remove="IBClient\EReaderSignal.cs" />
+    <Compile Remove="IBClient\ESocket.cs" />
+    <Compile Remove="IBClient\ETransport.cs" />
+    <Compile Remove="IBClient\EWrapper.cs" />
+    <Compile Remove="IBClient\Execution.cs" />
+    <Compile Remove="IBClient\ExecutionCondition.cs" />
+    <Compile Remove="IBClient\ExecutionFilter.cs" />
+    <Compile Remove="IBClient\FamilyCode.cs" />
+    <Compile Remove="IBClient\HistogramEntry.cs" />
+    <Compile Remove="IBClient\HistoricalTick.cs" />
+    <Compile Remove="IBClient\HistoricalTickBidAsk.cs" />
+    <Compile Remove="IBClient\HistoricalTickLast.cs" />
+    <Compile Remove="IBClient\IBParamsList.cs" />
+    <Compile Remove="IBClient\IDecoder.cs" />
+    <Compile Remove="IBClient\IncomingMessage.cs" />
+    <Compile Remove="IBClient\MarginCondition.cs" />
+    <Compile Remove="IBClient\MessageValidator.cs" />
+    <Compile Remove="IBClient\MinServerVer.cs" />
+    <Compile Remove="IBClient\NewsProvider.cs" />
+    <Compile Remove="IBClient\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Remove="IBClient\obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Remove="IBClient\OperatorCondition.cs" />
+    <Compile Remove="IBClient\Order.cs" />
+    <Compile Remove="IBClient\OrderComboLeg.cs" />
+    <Compile Remove="IBClient\OrderCondition.cs" />
+    <Compile Remove="IBClient\OrderState.cs" />
+    <Compile Remove="IBClient\OutgoingMessages.cs" />
+    <Compile Remove="IBClient\PercentChangeCondition.cs" />
+    <Compile Remove="IBClient\PriceCondition.cs" />
+    <Compile Remove="IBClient\PriceIncrement.cs" />
+    <Compile Remove="IBClient\Properties\AssemblyInfo.cs" />
+    <Compile Remove="IBClient\ScannerSubscription.cs" />
+    <Compile Remove="IBClient\SoftDollarTier.cs" />
+    <Compile Remove="IBClient\TagValue.cs" />
+    <Compile Remove="IBClient\TickAttrib.cs" />
+    <Compile Remove="IBClient\TickAttribBidAsk.cs" />
+    <Compile Remove="IBClient\TickAttribLast.cs" />
+    <Compile Remove="IBClient\TickType.cs" />
+    <Compile Remove="IBClient\TimeCondition.cs" />
+    <Compile Remove="IBClient\Util.cs" />
+    <Compile Remove="IBClient\VolumeCondition.cs" />
+    <Compile Remove="IBOrders\FormIBOrders.cs" />
+    <Compile Remove="IBOrders\FormIBOrders.designer.cs" />
+    <Compile Remove="IBWrapper\OrderSamples.cs" />
+    <EmbeddedResource Remove="BorderlessForm\Form1.resx" />
+    <EmbeddedResource Remove="BorderlessForm\MainForm.resx" />
+    <EmbeddedResource Remove="BorderlessForm\Properties\Resources.resx" />
+    <EmbeddedResource Remove="IBOrders\FormIBOrders.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="DBfishsize.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tinkoff\Test\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="BorderlessForm\BorderlessForm.csproj" />
+  </ItemGroup>
+</Project>
